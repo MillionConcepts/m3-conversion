@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:m3g20120120_crosstrack_corr</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      Chandrayaan-1 Orbiter Moon Mineralogy Mapper Global Mode Cross-Track
+      Correction Table
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <publication_year>2012</publication_year>
+      <description>
+        This table provides scalar values that can be added to Level 2
+        global-mode data products to reduce the cross-track effect. The scalars
+        are dependent on channel (columns) and line sample number (rows) in the
+        table. Investigation of mosaics derived from version 1.0 of the Level 2
+        M3 archive delivered to PDS found they include boundaries between
+        images, which are not completely removed even after the photometric
+        corrections. Although the exact cause is not well understood Besse, et
+        al., (2012) [BESSEETAL2012] show this residual cross-track effect is not
+        due to photometry. Instead it is likely due to a small residual
+        scattered light effect across the 24-degree field of view of the M3
+        instrument that is not characterized in the Level 1b radiance
+        calibration. An empirical correction to reduce the cross-track effect
+        was derived by using the average residual of all version 1.0 Level 2 M3
+        data archived in PDS. This table contains the resulting scalar values
+        that can be added to the Level 2 data to reduce the boundary differences
+        between images. The values do not change the mean reflectance of an
+        image. This correction can be used to improve mosaiced images; however
+        it has only a small effect on the spectra. This analysis is discussed in
+        the paper 'A Visible and Near-Infrared Photometric Correction for the
+        Moon Mineralogy Mapper (M3)' by Besse, et al., (2012) [BESSEETAL2012]."
+        (original description) It is in some sense not really "observational"
+        data and the timestamp below is simply the product creation time.
+      </description>
+    </Citation_Information>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2012-01-20T14:22:00Z</start_date_time>
+      <stop_date_time>2012-01-20T14:22:00Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Calibration</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <wavelength_range>Visible</wavelength_range>
+        <wavelength_range>Near Infrared</wavelength_range>
+        <wavelength_range>Infrared</wavelength_range>
+        <discipline_name>Imaging</discipline_name>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+				</lidvid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+   					</lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+   					</lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <Reference_List>
+    <Source_Product_External>
+      <external_source_product_identifier>
+        CH1-ORB-L-M3-4-L2-REFLECTANCE-V1.0:M3G20120120_CROSSTRACK_CORR
+      </external_source_product_identifier>
+      <reference_type>data_to_derived_source_product</reference_type>
+      <curating_facility>IMG</curating_facility>
+      <description>
+        PDS3 version of this product.
+      </description>
+    </Source_Product_External>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>m3g20120120_crosstrack_corr.tab</file_name>
+      <creation_date_time>2012-01-20T14:22:00Z</creation_date_time>
+      <records>305</records>
+    </File>
+    <Header>
+      <name>Header</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">1028</object_length>
+      <parsing_standard_id>UTF-8 Text</parsing_standard_id>
+      <description>
+        This header counts the 85 global-mode channels (1 to 85) of Level 2,
+        cross-track correction factors in this table.
+      </description>
+    </Header>
+    <Table_Character>
+      <offset unit="byte">0</offset>
+      <records>304</records>
+      <description>
+        Global Mode Cross-Track Correction Table
+      </description>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <Record_Character>
+        <fields>1</fields>
+        <groups>1</groups>
+        <record_length unit="byte">1028</record_length>
+        <Field_Character>
+          <name>Line Sample Number</name>
+          <field_number>1</field_number>
+          <field_location unit="byte">1</field_location>
+          <data_type>ASCII_Integer</data_type>
+          <field_length unit="byte">3</field_length>
+          <unit>Degree</unit>
+          <description>
+            This column contains integral line sample numbers from 1 to 304,
+            with 1 representing the left-most within a line, where each line of
+            a Level 2 image is displayed from left to right.
+          </description>
+        </Field_Character>
+        <Group_Field_Character>
+          <name>Crosstrack Correction Values</name>
+          <repetitions>85</repetitions>
+          <fields>1</fields>
+          <groups>0</groups>
+          <description>
+            "This column contains derived values for correcting the cross-track
+            effect, one value for each of the 85 channels (bands) of global-mode
+            data. Each value is a unitless additive scalar." (original
+            description) In the original PDS3 label, this is described as a
+            single 'column' containing 85 'items', a conceptual classification
+            that we believe maps best to the PDS4 group/field hierarchy.
+          </description>
+          <group_location unit="byte">5</group_location>
+          <group_length unit="byte">1020</group_length>
+          <Field_Character>
+            <name>Crosstrack Correction Value</name>
+            <field_number>1</field_number>
+            <field_location unit="byte">1</field_location>
+            <data_type>ASCII_Real</data_type>
+            <field_length unit="byte">12</field_length>
+            <description>
+              Crosstrack correction value for an individual channel.
+            </description>
+          </Field_Character>
+        </Group_Field_Character>
+      </Record_Character>
+    </Table_Character>
+  </File_Area_Observational>
+</Product_Observational>

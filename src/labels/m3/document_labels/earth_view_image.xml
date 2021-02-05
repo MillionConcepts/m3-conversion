@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1B00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/chan1/v1/PDS4_CHAN1_1E00_1110.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:disp="http://pds.nasa.gov/pds4/disp/v1"
+xmlns:img="http://pds.nasa.gov/pds4/img/v1" xmlns:proc="http://pds.nasa.gov/pds4/proc/v1"
+xmlns:chan1="http://pds.nasa.gov/pds4/mission/chan1/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd
+http://pds.nasa.gov/pds4/disp/v1     https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1B00.xsd
+http://pds.nasa.gov/pds4/img/v1     https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.xsd
+http://pds.nasa.gov/pds4/proc/v1     https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.xsd
+http://pds.nasa.gov/pds4/mission/chan1/v1  https://pds.nasa.gov/pds4/mission/chan1/v1/PDS4_CHAN1_1E00_1110.xsd
+">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:earth_view_image</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      Chandrayaan-1 Orbiter Moon Mineralogy Mapper Earth-View Observation
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <author_list>TBD</author_list>
+      <editor_list>TBD</editor_list>
+      <publication_year>2021</publication_year>
+      <description>
+    "Global mode earth-view observation as acquired on 22 July 2009. This
+    image was acquired by pointing Chandrayaan-1 spacecraft in the Earth
+    direction and then sweeping the M3 pushbroom field-of-view across the
+    Earth with a spacecraft pitch maneuver. This image includes the Western
+    Pacific region of the Earth and was acquired coincident with a solar
+    eclipse in the center of the image." (Description from EXTRINFO.TXT in
+    the PDS3 archive)
+
+    This file does not have a PDS3 label, but based on the original file name
+    (M3G20090722T021504_V03_RDN), the ENVI header, and the general character of
+    its contents, it appears to be a radiometrically-calibrated image produced
+    in basically the same way as the L1B RDN images from the main observational
+    series. We have converted it from ENVI IMG to FITS and discarded the detached ENVI header.
+
+    Note: most metadata in this label are taken from the PDS3 label of the L0 images
+    that appear to be its source products (included in this archive in product
+    urn:nasa:pds:ch1_m3:data:m3g20090722t021504_l0 and :m3g20090722t022534_l0).
+      </description>
+    </Citation_Information>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2021-01-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>
+          Original PDS4 version of this product.
+        </description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2009-07-22T02:15:04Z</start_date_time>
+    <stop_date_time>2009-07-22T02:25:34Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Calibrated</processing_level>
+      <Science_Facets>
+        <wavelength_range>Visible</wavelength_range>
+        <wavelength_range>Near Infrared</wavelength_range>
+        <wavelength_range>Infrared</wavelength_range>
+        <discipline_name>Imaging</discipline_name>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+				</lidvid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+   					</lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+   					</lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>EARTH</name>
+      <type>Planet</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:planet.earth::1.3</lidvid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Mission_Area>
+      <chan1:Chandrayaan-1_Parameters>
+        <chan1:release_id>0003</chan1:release_id>
+        <chan1:mission_phase_name>Primary Mission</chan1:mission_phase_name>
+        <chan1:orbit_number>3052</chan1:orbit_number>
+        <chan1:instrument_mode_id>Global</chan1:instrument_mode_id>
+        <chan1:producer_full_name>M3 Team</chan1:producer_full_name>
+        <chan1:producer_institution_name>Jet Propulsion Laboratory</chan1:producer_institution_name>
+   </chan1:Chandrayaan-1_Parameters>
+    </Mission_Area>
+    <Discipline_Area>
+      <disp:Display_Settings>
+        <Local_Internal_Reference>
+          <local_identifier_reference>earth_view_image</local_identifier_reference>
+          <local_reference_type>display_settings_to_array</local_reference_type>
+        </Local_Internal_Reference>
+        <disp:Display_Direction>
+          <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+          <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+          <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+          <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+        </disp:Display_Direction>
+      </disp:Display_Settings>
+      <img:Imaging>
+        <Local_Internal_Reference>
+          <local_identifier_reference>earth_view_image</local_identifier_reference>
+          <local_reference_type>imaging_parameters_to_image_object</local_reference_type>
+        </Local_Internal_Reference>
+        <img:Subframe>
+          <img:first_line>1</img:first_line>
+          <img:first_sample>1</img:first_sample>
+          <img:lines>35538</img:lines>
+          <img:samples>304</img:samples>
+        </img:Subframe>
+        <img:Instrument_State>
+          <img:Device_Component_States>
+            <img:Device_Component_State>
+              <img:device_id>DETECTOR</img:device_id>
+              <img:device_state>Global</img:device_state>
+            </img:Device_Component_State>
+          </img:Device_Component_States>
+          <img:Device_Temperatures>
+            <img:Device_Temperature>
+              <img:device_id>DETECTOR</img:device_id>
+              <img:temperature_value unit="K">155.23</img:temperature_value>
+            </img:Device_Temperature>
+          </img:Device_Temperatures>
+        </img:Instrument_State>
+      </img:Imaging>
+      <proc:Processing_Information>
+        <Local_Internal_Reference>
+          <local_identifier_reference>earth_view_image</local_identifier_reference>
+          <local_reference_type>processing_information_to_data_object</local_reference_type>
+        </Local_Internal_Reference>
+        <proc:Process>
+          <proc:description>Initial data archival.</proc:description>
+          <proc:Software>
+            <proc:name>{software_name}</proc:name>
+            <proc:software_version_id>{software_version}</proc:software_version_id>
+          </proc:Software>
+        </proc:Process>
+        <proc:Process>
+          <proc:description>Conversion to PDS4 archive format.</proc:description>
+          <proc:Software>
+            <proc:name>Planetary Data Reader</proc:name>
+          </proc:Software>
+        </proc:Process>
+      </proc:Processing_Information>
+    </Discipline_Area>
+  </Observation_Area>
+  <Reference_List>
+    <Source_Product_Internal>
+      <lidvid_reference>urn:nasa:pds:ch1_m3:data:m3g20090722t021504_l0::1.0</lidvid_reference>
+      <reference_type>data_to_raw_source_product</reference_type>
+      <comment>
+    L0 data from which this calibrated product was derived. (This image appears to be stitched together
+        from two L0 products.)
+   </comment>
+    </Source_Product_Internal>
+    <Source_Product_Internal>
+      <lidvid_reference>urn:nasa:pds:ch1_m3:data:m3g20090722t022534_l0::1.0</lidvid_reference>
+      <reference_type>data_to_raw_source_product</reference_type>
+      <comment>
+    L0 data from which this calibrated product was derived. (This image appears to be stitched together
+        from two L0 products.)
+   </comment>
+    </Source_Product_Internal>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>earth_view_image.fits</file_name>
+      <file_size unit="byte">3673207680</file_size>
+      <records>35538</records>
+    </File>
+    <Header>
+      <name>RDN FITS Header</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Array_3D_Image>
+      <local_identifier>earth_view_image</local_identifier>
+      <offset unit="byte">2880</offset>
+      <axes>3</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <description>
+        Earth view image: calibrated M3 earth-view image data. FITS version.
+      </description>
+      <Element_Array>
+        <data_type>IEEE754MSBSingle</data_type>
+        <unit>W/m**2/sr/μm</unit>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Band</axis_name>
+        <elements>85</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Lines</axis_name>
+        <elements>35538</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Samples</axis_name>
+        <elements>304</elements>
+        <sequence_number>3</sequence_number>
+      </Axis_Array>
+    </Array_3D_Image>
+  </File_Area_Observational>
+</Product_Observational>

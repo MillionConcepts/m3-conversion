@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_SPICE_Kernel xmlns="http://pds.nasa.gov/pds4/pds/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+    <Identification_Area>
+    	<logical_identifier>urn:nasa:pds:ch1_m3:document:m3_target_mode_camera</logical_identifier>
+    	<version_id>1.0</version_id>
+		<title>
+		SPICE text IK instrument kernel for M3 Target 
+		Mode camera model and FOV
+		</title>
+		<information_model_version>1.15.0.0</information_model_version>
+		<product_class>Product_SPICE_Kernel</product_class>
+		<Citation_Information>
+			<author_list>Joe W. Boardman</author_list>
+			<publication_year>2010</publication_year>
+			<description>
+			From the kernel header: "Version 1.0 June 29, 2010 Joe W. Boardman boardman@aigllc.com 303 543-9960 M3 Science Team
+
+			This IK implements a parabolic model of the across track and down track look angles
+			as derived from OP1 orthocorrection inversion for June, 2010 delivery.
+
+			The comment section of this kernel gives the boresight direction cosines for the 608 active across-track pixels
+			in Target mode.  For Global mode these should be averaged in pairs and renormalized to give 304 vectors.
+
+			A SPICE IK follows these comments where the polygonal FOV is given for the 608 pixels.  The polygon consists of 610*2
+			unit-vecotrs wrapping around the the top then the bottom of the curved M3 FOV projection in object space.  The polygon
+			is defined by splitting the across-slit spacing of the boresight centers, given in the comment section below, then
+			allowing a nominal 700 microradian down-track FOV for each pixel.
+
+			The coordinate frame in use is a standard aerospace frame of +X to nose, +y to right wing and +z to nadir."
+			Note: the time coordinates below are the time coordinates given for the associated clock kernel.
+			</description>
+		</Citation_Information>
+	</Identification_Area>
+	<Context_Area>
+		<Time_Coordinates>
+			<start_date_time>2008-10-22T00:00:00Z</start_date_time>
+			<stop_date_time>2010-12-31T00:00:00Z</stop_date_time>
+		</Time_Coordinates>
+		<Investigation_Area>
+			<name>CHANDRAYAAN-1</name>
+			<type>Mission</type>
+			<Internal_Reference>
+				<lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+				</lidvid_reference>
+    			<reference_type>data_to_investigation</reference_type>
+   			</Internal_Reference>
+   		</Investigation_Area>
+   		<Observing_System>
+   			<Observing_System_Component>
+   				<name>CHANDRAYAAN-1 ORBITER</name>
+   				<type>Host</type>
+   				<Internal_Reference>
+   					<lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+   					</lidvid_reference>
+   					<reference_type>is_instrument_host</reference_type>
+   				</Internal_Reference>
+   			</Observing_System_Component>
+   			<Observing_System_Component>
+   				<name>MOON MINERALOGY MAPPER</name>
+   				<type>Instrument</type>
+   				<Internal_Reference>
+   					<lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+   					</lidvid_reference>
+   					<reference_type>is_instrument</reference_type>
+   				</Internal_Reference>
+   			</Observing_System_Component>
+   		</Observing_System>
+   		<Target_Identification>
+		   <name>Moon</name>
+		   <type>Satellite</type>
+		   <Internal_Reference>
+		   		<lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+		    	<reference_type>data_to_target</reference_type>
+		   </Internal_Reference>
+		</Target_Identification>
+	</Context_Area>
+	<File_Area_SPICE_Kernel>
+		<File>
+			<file_name>m3_target_mode_camera.ik</file_name>
+			<creation_date_time>2010-06-29T00:00:00Z</creation_date_time>
+		</File>
+		<SPICE_Kernel>
+			<offset unit="byte">0</offset>
+			<parsing_standard_id>SPICE</parsing_standard_id>
+			<description>
+			SPICE text IK instrument kernel for M3 Target Mode camera model and FOV
+			</description>
+			<kernel_type>IK</kernel_type>
+			<encoding_type>Character</encoding_type>
+		</SPICE_Kernel>
+	</File_Area_SPICE_Kernel>
+</Product_SPICE_Kernel>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1B00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/chan1/v1/PDS4_CHAN1_1E00_1110.sch " schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:disp="http://pds.nasa.gov/pds4/disp/v1" xmlns:img="http://pds.nasa.gov/pds4/img/v1" xmlns:proc="http://pds.nasa.gov/pds4/proc/v1" xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
+xmlns:chan1="http://pds.nasa.gov/pds4/mission/chan1/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd 
+http://pds.nasa.gov/pds4/disp/v1     https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1B00.xsd 
+http://pds.nasa.gov/pds4/img/v1     https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.xsd 
+http://pds.nasa.gov/pds4/proc/v1     https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.xsd
+http://pds.nasa.gov/pds4/mission/chan1/v1  https://pds.nasa.gov/pds4/mission/chan1/v1/PDS4_CHAN1_1E00_1110.xsd
+">
+ <Identification_Area>
+  <logical_identifier>urn:nasa:pds:ch1_m3:data:{basename_lower}_l0</logical_identifier>
+  <version_id>1.0</version_id>
+  <title>
+   Chandrayaan-1 Orbiter Moon Mineralogy Mapper L0 Observational Product
+   {basename_lower}
+  </title>
+  <information_model_version>1.15.0.0</information_model_version>
+  <product_class>Product_Observational</product_class>
+  <Citation_Information>
+   <author_list>TBD</author_list>
+   <editor_list>TBD</editor_list>
+   <publication_year>2021</publication_year>
+   <description>
+    "M3 Level 0 data product which consists of raw science data, reassembled
+    into time-sequenced data in units of digital numbers." (original
+    description) There are two files associated with this product, which
+    together constitute a lossless conversion of the ENVI .IMG file archived
+    under PDS3 by the original instrument team. Specifically, the
+    PDS4-noncompliant 'line prefix' data has been removed from the .IMG file,
+    ASCII-encoded, and presented as a detached .csv table; the image proper in
+    the .IMG file has been reformatted to FITS.
+   </description>
+  </Citation_Information>
+  <Modification_History>
+   <Modification_Detail>
+    <modification_date>2021-01-30</modification_date>
+    <version_id>1.0</version_id>
+    <description>
+     Original PDS4 version of this product.
+    </description>
+   </Modification_Detail>
+  </Modification_History>
+ </Identification_Area>
+ <Observation_Area>
+  <Time_Coordinates>
+   <start_date_time>{start_time}Z</start_date_time>
+   <stop_date_time>{stop_time}Z</stop_date_time>
+  </Time_Coordinates>
+  <Primary_Result_Summary>
+   <purpose>Science</purpose>
+   <processing_level>Raw</processing_level>
+   <Science_Facets>
+    <wavelength_range>Visible</wavelength_range>
+    <wavelength_range>Near Infrared</wavelength_range>
+    <wavelength_range>Infrared</wavelength_range>
+    <discipline_name>Imaging</discipline_name>
+   </Science_Facets>
+  </Primary_Result_Summary>
+  <Investigation_Area>
+   <name>CHANDRAYAAN-1</name>
+   <type>Mission</type>
+   <Internal_Reference>
+    <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+</lidvid_reference>
+    <reference_type>data_to_investigation</reference_type>
+   </Internal_Reference>
+  </Investigation_Area>
+  <Observing_System>
+   <Observing_System_Component>
+    <name>CHANDRAYAAN-1 ORBITER</name>
+    <type>Host</type>
+    <Internal_Reference>
+     <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+</lidvid_reference>
+     <reference_type>is_instrument_host</reference_type>
+    </Internal_Reference>
+   </Observing_System_Component>
+   <Observing_System_Component>
+    <name>MOON MINERALOGY MAPPER</name>
+    <type>Instrument</type>
+    <Internal_Reference>
+     <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0</lidvid_reference>
+     <reference_type>is_instrument</reference_type>
+    </Internal_Reference>
+   </Observing_System_Component>
+  </Observing_System>
+  <Target_Identification>
+   <name>MOON</name>
+   <type>Satellite</type>
+   <Internal_Reference>
+    <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+    <reference_type>data_to_target</reference_type>
+   </Internal_Reference>
+  </Target_Identification>
+  <Mission_Area>
+   <chan1:Chandrayaan-1_Parameters>
+    <chan1:release_id>0001</chan1:release_id>
+    <chan1:mission_phase_name>Primary Mission</chan1:mission_phase_name>
+    <chan1:orbit_number>{orbit_number}</chan1:orbit_number>
+    <chan1:spacecraft_clock_start_count>{spacecraft_clock_start}</chan1:spacecraft_clock_start_count>
+    <chan1:spacecraft_clock_stop_count>{spacecraft_clock_stop}</chan1:spacecraft_clock_stop_count>
+    <chan1:instrument_mode_id>{instrument_mode_id}</chan1:instrument_mode_id>
+    <chan1:producer_full_name>M3 Team</chan1:producer_full_name>
+    <chan1:producer_institution_name>Jet Propulsion Laboratory</chan1:producer_institution_name>
+   </chan1:Chandrayaan-1_Parameters>
+  </Mission_Area>
+  <Discipline_Area>
+   <disp:Display_Settings>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l0_image</local_identifier_reference>
+     <local_reference_type>display_settings_to_array</local_reference_type>
+    </Local_Internal_Reference>
+    <disp:Display_Direction>
+     <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+     <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+     <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+     <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+    </disp:Display_Direction>
+   </disp:Display_Settings>
+   <img:Imaging>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l0_image</local_identifier_reference>
+     <local_reference_type>imaging_parameters_to_image_object</local_reference_type>
+    </Local_Internal_Reference>
+    <img:Subframe>
+     <img:first_line>1</img:first_line>
+     <img:first_sample>1</img:first_sample>
+     <img:lines>{swath_length}</img:lines>
+     <img:samples>{swath_width}</img:samples>
+    </img:Subframe>
+    <img:Instrument_State>
+     <img:Device_Temperatures>
+      <img:Device_Temperature>
+       <img:device_id>DETECTOR</img:device_id>
+       <img:temperature_value unit="K">{detector_temperature}</img:temperature_value>
+      </img:Device_Temperature>
+     </img:Device_Temperatures>
+    </img:Instrument_State>
+   </img:Imaging>
+   <proc:Processing_Information>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l0_image</local_identifier_reference>
+     <local_reference_type>processing_information_to_data_object</local_reference_type>
+    </Local_Internal_Reference>
+    <proc:Process>
+     <proc:description>Initial data archival.</proc:description>
+     <proc:Software>
+      <proc:name>{software_name}</proc:name>
+      <proc:software_version_id>{software_version}</proc:software_version_id>
+     </proc:Software>
+    </proc:Process>
+    <proc:Process>
+     <proc:description>Conversion to PDS4 archive format.</proc:description>
+     <proc:Software>
+      <proc:name>Planetary Data Reader</proc:name>
+     </proc:Software>
+    </proc:Process>
+   </proc:Processing_Information>
+  </Discipline_Area>
+ </Observation_Area>
+ <Reference_List>
+  <Source_Product_External>
+   <external_source_product_identifier>
+    CH1-ORB-L-M3-2-L0-RAW-V1:{product_id}
+   </external_source_product_identifier>
+   <reference_type>data_to_raw_source_product</reference_type>
+   <curating_facility>IMG</curating_facility>
+   <description>
+    PDS3 version of this product.
+   </description>
+  </Source_Product_External>
+ </Reference_List>
+ <File_Area_Observational>
+  <File>
+   <file_name>{basename_lower}_l0.fits</file_name>
+   <creation_date_time>{product_creation_time}Z</creation_date_time>
+   <file_size unit="byte">{fits_file_size}</file_size>
+   <records>{file_records}</records>
+  </File>
+  <Header>
+   <name>FITS Image Header</name>
+   <offset unit="byte">0</offset>
+   <object_length unit="byte">2880</object_length>
+   <parsing_standard_id>FITS 3.0</parsing_standard_id>
+  </Header>
+  <Array_3D_Image>
+   <local_identifier>{basename_lower}_l0_image</local_identifier>
+   <offset unit="byte">2880</offset>
+   <axes>3</axes>
+   <axis_index_order>Last Index Fastest</axis_index_order>
+   <description>
+    L0_IMAGE: raw M3 observational data. FITS version.
+   </description>
+   <Element_Array>
+    <data_type>SignedLSB2</data_type>
+   </Element_Array>
+   <Axis_Array>
+    <axis_name>Band</axis_name>
+    <elements>{bands}</elements>
+    <sequence_number>1</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Lines</axis_name>
+    <elements>{rows}</elements>
+    <sequence_number>2</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Samples</axis_name>
+    <elements>{line_samples}</elements>
+    <sequence_number>3</sequence_number>
+   </Axis_Array>
+  </Array_3D_Image>
+ </File_Area_Observational>
+ <File_Area_Observational>
+  <File>
+   <file_name>{basename_lower}_l0_clock_table.csv</file_name>
+   <file_size unit="byte">{clock_file_size}</file_size>
+   <records>{file_records}</records>
+  </File>
+  <Table_Delimited>
+   <local_identifier>{basename_lower}_l0_clock_table</local_identifier>
+   <offset unit="byte">0</offset>
+   <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+   <description>
+    Table containing per-frame raw CCSDS clock state information. Detached,
+    ASCII-encoded CSV version of binary line-prefix table (L0_LINE_PREFIX_TABLE)
+    in PDS3 version of this product.
+   </description>
+   <records>{file_records}</records>
+   <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+   <field_delimiter>Comma</field_delimiter>
+   <Record_Delimited>
+    <fields>23</fields>
+    <groups>0</groups>
+    <Field_Delimited>
+     <name>Byte 1</name>
+     <field_number>1</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 1 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 2</name>
+     <field_number>2</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 2 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 3</name>
+     <field_number>3</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 3 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 4</name>
+     <field_number>4</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 4 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 5</name>
+     <field_number>5</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 5 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 6</name>
+     <field_number>6</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 6 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 7</name>
+     <field_number>7</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 7 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 8</name>
+     <field_number>8</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 8 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 9</name>
+     <field_number>9</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 9 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 10</name>
+     <field_number>10</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 10 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 11</name>
+     <field_number>11</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 11 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 12</name>
+     <field_number>12</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 12 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 13</name>
+     <field_number>13</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 13 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 14</name>
+     <field_number>14</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 14 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 15</name>
+     <field_number>15</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 15 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 16</name>
+     <field_number>16</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 16 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 17</name>
+     <field_number>17</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 17 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 18</name>
+     <field_number>18</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 18 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 19</name>
+     <field_number>19</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 19 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 20</name>
+     <field_number>20</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 20 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 21</name>
+     <field_number>21</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 21 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Byte 22</name>
+     <field_number>22</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Byte 22 of the raw CCSDS clock state information. See the SIS for
+      translation details.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Leading Text</name>
+     <field_number>23</field_number>
+     <data_type>ASCII_String</data_type>
+     <description>
+      Although the mission SIS specifies that L0 line prefix table records begin
+      with a series of \x00 (null) bytes, in some cases the instrument team in
+      fact placed additional header-type information in this area. There does
+      not appear to be a format standard for this information, so when any such
+      information is present in the source file, we have simply placed the
+      entirety of it in this field as a single string. When (as in most cases)
+      only null bytes are present in these 'blank' areas, we have entered 'n/a'
+      in this field.
+     </description>
+    </Field_Delimited>
+   </Record_Delimited>
+  </Table_Delimited>
+ </File_Area_Observational>
+</Product_Observational>

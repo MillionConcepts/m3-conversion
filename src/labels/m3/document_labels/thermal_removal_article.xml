@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Document xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:thermal_removal_article</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      Thermal removeal from near-infrared imaging spectroscopy data of the Moon
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Document</product_class>
+    <Citation_Information>
+      <author_list>Clark, R. N., C. M. Pieters, R. O. Green, J. W. Boardman, and N. E. Petro.</author_list>
+      <publication_year>2011</publication_year>
+      <doi>10.1029/2010JE003751</doi>
+      <description>
+        JGR article describing a thermal background reduction technique used in
+        M3's data reduction pipeline.
+      </description>
+    </Citation_Information>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2021-01-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>
+          Creation of PDS4 label. PDF copied from PDS3 archive and converted to
+          PDF/A.
+        </description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Context_Area>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1</lidvid_reference>
+        <reference_type>document_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+          </lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+          </lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>document_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Context_Area>
+  <Reference_List>
+    <External_Reference>
+      <doi>10.1029/2010JE003751</doi>
+      <reference_text>
+        Clark, R. N., C. M. Pieters, R. O. Green, J. W. Boardman, and N. E. Petro (2011), Thermal removal from near-infrared imaging spectroscopy data of the Moon, J. Geophys. Res., 116, E00G16
+      </reference_text>
+      <description>JGR article describing a thermal background reduction technique used in
+        M3's data reduction pipeline.</description>
+    </External_Reference>
+  </Reference_List>
+  <Document>
+    <publication_date>2011</publication_date>
+    <description>
+      JGR article describing a thermal background reduction technique used in
+      M3's data reduction pipeline.
+    </description>
+    <Document_Edition>
+      <edition_name>PDF/A version</edition_name>
+      <language>English</language>
+      <files>1</files>
+      <Document_File>
+        <file_name>thermal_removal_article.pdf</file_name>
+        <document_standard_id>PDF/A</document_standard_id>
+      </Document_File>
+    </Document_Edition>
+  </Document>
+</Product_Document>

@@ -1,0 +1,17 @@
+name: m3_conversion
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - more-itertools
+  - pandas
+  - python=3.9
+  - numpy
+  - toolz
+  - fs
+  - pvl=0.3.0
+  - jupyter
+  - astropy
+  - sh
+  - rasterio
+prefix: /home/michael/anaconda3/envs/m3_conversion

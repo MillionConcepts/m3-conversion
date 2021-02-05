@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:m3g20111109_rfl_f_alpha_hil</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      Global Mode F of Alpha Table
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <author_list>R. Clark</author_list>
+      <editor_list>S. McLaughlin</editor_list>
+      <publication_year>2011</publication_year>
+      <description>
+        "This table provides F-of-Alpha photometric correction factors for
+        global-mode reflectance data. The factors are dependent on phase angle
+        (alpha) and channel (wavelength) for [sic] and were derived from
+        highland data." (original description)" Note that these photometric
+        correction factors were later found to produce some undesirable results,
+        particularly in the 2500-3000 nm range, but all of the archived data
+        retains these erroneous factors. M3G20120120_RFL_F_ALPHA_HIL.TAB is an
+        updated version intended to replace these factors after a user divides
+        them back out of the L2 data (see pp. 48-50 of DPSIS.PDF for a
+        description of the photometric correction step of L2 data reduction,
+        though no explicit method for reversing this correction is explicitly
+        discussed). This table is some sense not really "observational" data and
+        the timestamp below is simply the product creation time.
+      </description>
+    </Citation_Information>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2011-11-09T11:27:00Z</start_date_time>
+      <stop_date_time>2011-11-09T11:27:00Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Calibration</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <wavelength_range>Visible</wavelength_range>
+        <wavelength_range>Near Infrared</wavelength_range>
+        <wavelength_range>Infrared</wavelength_range>
+        <discipline_name>Imaging</discipline_name>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+				</lidvid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+   					</lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+   					</lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <Reference_List>
+    <Source_Product_External>
+      <external_source_product_identifier>
+        CH1-ORB-L-M3-4-L2-REFLECTANCE-V1.0:M3G20111109_RFL_F_ALPHA_HIL
+      </external_source_product_identifier>
+      <reference_type>data_to_derived_source_product</reference_type>
+      <curating_facility>IMG</curating_facility>
+      <description>
+        PDS3 version of this product.
+      </description>
+    </Source_Product_External>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>m3g20111109_rfl_f_alpha_hil.tab</file_name>
+      <creation_date_time>2011-11-09T11:27:00Z</creation_date_time>
+      <records>122</records>
+    </File>
+    <Header>
+      <name>Header</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">1028</object_length>
+      <parsing_standard_id>UTF-8 Text</parsing_standard_id>
+      <description>
+        This header counts the 85 global-mode channels (1 to 85) of F-of-Alpha
+        photometric correction factors in this table.
+      </description>
+    </Header>
+    <Table_Character>
+      <offset unit="byte">0</offset>
+      <records>121</records>
+      <description>
+        "This table provides F-of-Alpha photometric correction factors for
+        global-mode reflectance data. The factors are dependent on phase angle
+        (alpha) and channel (wavelength) for [sic] and were derived from
+        highland data." (original description)"
+      </description>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <Record_Character>
+        <fields>1</fields>
+        <groups>1</groups>
+        <record_length unit="byte">1028</record_length>
+        <Field_Character>
+          <name>Phase Angle</name>
+          <field_number>1</field_number>
+          <field_location unit="byte">1</field_location>
+          <data_type>ASCII_Integer</data_type>
+          <field_length unit="byte">3</field_length>
+          <unit>Degree</unit>
+          <description>
+            This column contains integral phase angles from 0 to 98 degrees.
+          </description>
+        </Field_Character>
+        <Group_Field_Character>
+          <name>F of Alpha Correction Factors</name>
+          <repetitions>85</repetitions>
+          <fields>1</fields>
+          <groups>0</groups>
+          <description>
+            "This column contains derived F-of-Alpha photometric correction
+            factors, one for each of the 85 channels (bands) of target-mode
+            data. Each value is a unitless multiplicative factor used for the
+            F-of-Alpha photometric correction." (original description) In the
+            original PDS3 label, this is described as a single 'column'
+            containing 85 'items', a conceptual classification that we believe
+            maps best to the PDS4 group/field hierarchy.
+          </description>
+          <group_location unit="byte">5</group_location>
+          <group_length unit="byte">1020</group_length>
+          <Field_Character>
+            <name>F of Alpha Factor</name>
+            <field_number>1</field_number>
+            <field_location unit="byte">1</field_location>
+            <data_type>ASCII_Real</data_type>
+            <field_length unit="byte">12</field_length>
+            <description>
+              F of alpha correction factor for an individual channel.
+            </description>
+          </Field_Character>
+        </Group_Field_Character>
+      </Record_Character>
+    </Table_Character>
+  </File_Area_Observational>
+</Product_Observational>

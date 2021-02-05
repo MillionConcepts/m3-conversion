@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1B00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/chan1/v1/PDS4_CHAN1_1E00_1110.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" xmlns:disp="http://pds.nasa.gov/pds4/disp/v1" 
+xmlns:img="http://pds.nasa.gov/pds4/img/v1" xmlns:proc="http://pds.nasa.gov/pds4/proc/v1" xmlns:geom="http://pds.nasa.gov/pds4/geom/v1" 
+xmlns:chan1="http://pds.nasa.gov/pds4/mission/chan1/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd 
+http://pds.nasa.gov/pds4/disp/v1     https://pds.nasa.gov/pds4/disp/v1/PDS4_DISP_1B00.xsd 
+http://pds.nasa.gov/pds4/img/v1     https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.xsd 
+http://pds.nasa.gov/pds4/proc/v1     https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.xsd
+http://pds.nasa.gov/pds4/geom/v1   https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.xsd
+http://pds.nasa.gov/pds4/mission/chan1/v1  https://pds.nasa.gov/pds4/mission/chan1/v1/PDS4_CHAN1_1E00_1110.xsd
+">
+ <Identification_Area>
+  <logical_identifier>urn:nasa:pds:ch1_m3:data:{basename_lower}_l1b</logical_identifier>
+  <version_id>1.0</version_id>
+  <title>
+   Chandrayaan-1 Orbiter Moon Mineralogy Mapper L1B Observational Product
+   {basename_lower}
+  </title>
+  <information_model_version>1.15.0.0</information_model_version>
+  <product_class>Product_Observational</product_class>
+  <Citation_Information>
+   <author_list>TBD</author_list>
+   <editor_list>TBD</editor_list>
+   <publication_year>2021</publication_year>
+   <description>
+    "M3 Level 1B data product which contains pixel-located,
+    radiometrically-calibrated data." (original description) There are four
+    files associated with this product: a multiband image (*_rdn.fits), an array
+    giving pixel locations in selenocentric coordinates (*_loc.fits), an
+    observation geometry array (*_obs.fits), and a timing table (*_tim.csv). The
+    *.fits files are versions of ENVI .IMG files archived under PDS3 by the
+    instrument team, straightforwardly repackaged in FITS format. We have
+    slightly modified the timing table to conform to PDS4 standards for
+    specifying UTC time data. Please note that these the instrument team
+    corrected L1B and L2 products for orbit direction and spacecraft
+    orientation, so they may appear horizontally and/or vertically mirrored with
+    respect to their L0 source images. We have chosen to follow the instrument
+    team's decision to specify left-to-right, top-to-bottom display directions
+    for all products and leave coregistration of L0 with L1B / L2 products up to
+    users. Refer to their discussion on p.77 of the DPSIS along with the
+    chan1:orbit_limb_direction and chan1:spacecraft_yaw_direction tags in this
+    label.
+   </description>
+  </Citation_Information>
+  <Modification_History>
+   <Modification_Detail>
+    <modification_date>2021-01-30</modification_date>
+    <version_id>1.0</version_id>
+    <description>
+     Original PDS4 version of this product.
+    </description>
+   </Modification_Detail>
+  </Modification_History>
+ </Identification_Area>
+ <Observation_Area>
+  <Time_Coordinates>
+   <start_date_time>{start_time}Z</start_date_time>
+   <stop_date_time>{stop_time}Z</stop_date_time>
+  </Time_Coordinates>
+  <Primary_Result_Summary>
+   <purpose>Science</purpose>
+   <processing_level>Calibrated</processing_level>
+   <Science_Facets>
+    <wavelength_range>Visible</wavelength_range>
+    <wavelength_range>Near Infrared</wavelength_range>
+    <wavelength_range>Infrared</wavelength_range>
+    <discipline_name>Imaging</discipline_name>
+   </Science_Facets>
+  </Primary_Result_Summary>
+  <Investigation_Area>
+   <name>CHANDRAYAAN-1</name>
+   <type>Mission</type>
+   <Internal_Reference>
+    <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+				</lidvid_reference>
+    <reference_type>data_to_investigation</reference_type>
+   </Internal_Reference>
+  </Investigation_Area>
+  <Observing_System>
+   <Observing_System_Component>
+    <name>CHANDRAYAAN-1 ORBITER</name>
+    <type>Host</type>
+    <Internal_Reference>
+     <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+   					</lidvid_reference>
+     <reference_type>is_instrument_host</reference_type>
+    </Internal_Reference>
+   </Observing_System_Component>
+   <Observing_System_Component>
+    <name>MOON MINERALOGY MAPPER</name>
+    <type>Instrument</type>
+    <Internal_Reference>
+     <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+   					</lidvid_reference>
+     <reference_type>is_instrument</reference_type>
+    </Internal_Reference>
+   </Observing_System_Component>
+  </Observing_System>
+  <Target_Identification>
+   <name>MOON</name>
+   <type>Satellite</type>
+   <Internal_Reference>
+    <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+    <reference_type>data_to_target</reference_type>
+   </Internal_Reference>
+  </Target_Identification>
+  <Mission_Area>
+   <chan1:Chandrayaan-1_Parameters>
+    <chan1:release_id>0003</chan1:release_id>
+    <chan1:mission_phase_name>Primary Mission</chan1:mission_phase_name>
+    <chan1:orbit_number>{orbit_number}</chan1:orbit_number>
+    <chan1:spacecraft_clock_start_count>{spacecraft_clock_start}</chan1:spacecraft_clock_start_count>
+    <chan1:spacecraft_clock_stop_count>{spacecraft_clock_stop}</chan1:spacecraft_clock_stop_count>
+    <chan1:instrument_mode_id>{instrument_mode_id}</chan1:instrument_mode_id>
+    <chan1:producer_full_name>M3 Team</chan1:producer_full_name>
+    <chan1:producer_institution_name>Jet Propulsion Laboratory</chan1:producer_institution_name>
+    <chan1:spacecraft_yaw_direction>{spacecraft_yaw_direction}</chan1:spacecraft_yaw_direction>
+    <chan1:orbit_limb_direction>{orbit_limb_direction}</chan1:orbit_limb_direction>
+    {orientation_epoch_time}
+    {spacecraft_rotation_rate}
+    {initial_spacecraft_orientation_tag}
+     {initial_roll_tag}
+     {initial_pitch_tag}
+     {initial_yaw_tag}
+    {close_initial_spacecraft_orientation_tag}
+    {spacecraft_orientation_tag}
+     {roll_tag}
+     {pitch_tag}
+     {yaw_tag}
+    {close_spacecraft_orientation_tag}
+    {spacecraft_orientation_rates_tag}
+     {roll_rate_tag}
+     {pitch_rate_tag}
+     {yaw_rate_tag}
+    {close_spacecraft_orientation_rates_tag}
+    {spacecraft_orientation_axis_vector_tag}
+     {x_unit_tag}
+     {y_unit_tag}
+     {z_unit_tag}
+    {close_spacecraft_orientation_axis_vector_tag}
+   </chan1:Chandrayaan-1_Parameters>
+  </Mission_Area>
+  <Discipline_Area>
+   <disp:Display_Settings>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l1b_rdn</local_identifier_reference>
+     <local_reference_type>display_settings_to_array</local_reference_type>
+    </Local_Internal_Reference>
+    <disp:Display_Direction>
+     <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+     <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+     <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+     <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+    </disp:Display_Direction>
+  </disp:Display_Settings>
+  <disp:Display_Settings>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l1b_loc</local_identifier_reference>
+     <local_reference_type>display_settings_to_array</local_reference_type>
+    </Local_Internal_Reference>
+    <disp:Display_Direction>
+     <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+     <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+     <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+     <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+    </disp:Display_Direction>
+   </disp:Display_Settings>
+   <disp:Display_Settings>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l1b_obs</local_identifier_reference>
+     <local_reference_type>display_settings_to_array</local_reference_type>
+    </Local_Internal_Reference>
+    <disp:Display_Direction>
+     <disp:horizontal_display_axis>Sample</disp:horizontal_display_axis>
+     <disp:horizontal_display_direction>Left to Right</disp:horizontal_display_direction>
+     <disp:vertical_display_axis>Line</disp:vertical_display_axis>
+     <disp:vertical_display_direction>Top to Bottom</disp:vertical_display_direction>
+    </disp:Display_Direction>
+   </disp:Display_Settings>
+   <img:Imaging>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l1b_rdn</local_identifier_reference>
+     <local_reference_type>imaging_parameters_to_image_object</local_reference_type>
+    </Local_Internal_Reference>
+    <img:Subframe>
+     <img:first_line>1</img:first_line>
+     <img:first_sample>1</img:first_sample>
+     <img:lines>{swath_length}</img:lines>
+     <img:samples>{swath_width}</img:samples>
+    </img:Subframe>
+    <img:Instrument_State>
+     <img:Device_Component_States>
+      <img:Device_Component_State>
+       <img:device_id>DETECTOR</img:device_id>
+       <img:device_state>{instrument_mode_id}</img:device_state>
+      </img:Device_Component_State>
+     </img:Device_Component_States>
+     <img:Device_Temperatures>
+      <img:Device_Temperature>
+       <img:device_id>DETECTOR</img:device_id>
+       <img:temperature_value unit="K">{detector_temperature}</img:temperature_value>
+      </img:Device_Temperature>
+     </img:Device_Temperatures>
+    </img:Instrument_State>
+   </img:Imaging>
+   <geom:Geometry>
+    <geom:SPICE_Kernel_Files>
+     <geom:SPICE_Kernel_Identification>
+      <geom:spice_kernel_file_name>CH-1-JPL-MERGED-23-MARCH-2010-1220.BSP</geom:spice_kernel_file_name>
+     </geom:SPICE_Kernel_Identification>
+    </geom:SPICE_Kernel_Files>
+    <geom:Geometry_Orbiter>
+      <geom:geometry_start_time_utc>{start_time}Z</geom:geometry_start_time_utc>
+      <geom:geometry_stop_time_utc>{stop_time}Z</geom:geometry_stop_time_utc>
+      <geom:Distances>
+        <geom:Distances_Specific>
+          <geom:spacecraft_heliocentric_distance unit="AU">{solar_distance}</geom:spacecraft_heliocentric_distance>
+        </geom:Distances_Specific>
+      </geom:Distances>
+      <geom:Surface_Geometry>
+        <geom:Surface_Geometry_Min_Max>
+          <geom:minimum_latitude unit="deg">{minimum_latitude}</geom:minimum_latitude>
+          <geom:maximum_latitude unit="deg">{maximum_latitude}</geom:maximum_latitude>
+          <geom:minimum_longitude unit="deg">{minimum_longitude}</geom:minimum_longitude>
+          <geom:maximum_longitude unit="deg">{maximum_longitude}</geom:maximum_longitude>
+        </geom:Surface_Geometry_Min_Max>
+      </geom:Surface_Geometry>
+    </geom:Geometry_Orbiter>
+   </geom:Geometry>
+   <proc:Processing_Information>
+    <Local_Internal_Reference>
+     <local_identifier_reference>{basename_lower}_l1b_rdn</local_identifier_reference>
+     <local_reference_type>processing_information_to_data_object</local_reference_type>
+    </Local_Internal_Reference>
+    <proc:Process>
+     <proc:description>Initial data archival.</proc:description>
+     <proc:Software>
+      <proc:name>{software_name}</proc:name>
+      <proc:software_version_id>{software_version}</proc:software_version_id>
+     </proc:Software>
+    </proc:Process>
+    <proc:Process>
+     <proc:description>Conversion to PDS4 archive format.</proc:description>
+     <proc:Software>
+      <proc:name>Planetary Data Reader</proc:name>
+     </proc:Software>
+    </proc:Process>
+   </proc:Processing_Information>
+  </Discipline_Area>
+ </Observation_Area>
+ <Reference_List>
+ 	<Source_Product_Internal>
+   <lidvid_reference>urn:nasa:pds:ch1_m3:data:{basename_lower}_l0::1.0</lidvid_reference>
+   <reference_type>data_to_raw_source_product</reference_type>
+   <comment>
+    L0 data from which this calibrated product was derived.
+   </comment>
+  </Source_Product_Internal>
+  <Source_Product_Internal>
+   <lidvid_reference>urn:nasa:pds:ch1_m3:document:{spectral_calibration_file}::1.0</lidvid_reference>
+   <reference_type>data_to_derived_source_product</reference_type>
+   <comment>
+    spectral calibration file for this product
+   </comment>
+  </Source_Product_Internal>
+  <Source_Product_Internal>
+   <lidvid_reference>urn:nasa:pds:ch1_m3:document:{rad_gain_file}::1.0</lidvid_reference>
+   <reference_type>data_to_derived_source_product</reference_type>
+   <comment>
+    radiometric gain file for this product
+   </comment>
+  </Source_Product_Internal>
+  <Source_Product_Internal>
+   <lidvid_reference>urn:nasa:pds:ch1_m3:document:global_bandpass_file::1.0</lidvid_reference>
+   <reference_type>data_to_derived_source_product</reference_type>
+   <comment>
+    global bandpass file for this product
+   </comment>
+  </Source_Product_Internal>
+  <Source_Product_Internal>
+   <lidvid_reference>urn:nasa:pds:ch1_m3:document:{basename_lower}_ssc::1.0</lidvid_reference>
+   <reference_type>data_to_derived_source_product</reference_type>
+   <comment>
+    smooth shape correction curve for this product
+   </comment>
+  </Source_Product_Internal>
+  <Source_Product_External>
+   <external_source_product_identifier>
+    CH1-ORB-L-M3-4-L1B-RADIANCE-V3.0:{product_id}
+   </external_source_product_identifier>
+   <reference_type>data_to_calibrated_source_product</reference_type>
+   <curating_facility>IMG</curating_facility>
+   <description>
+    PDS3 version of this product.
+   </description>
+  </Source_Product_External>
+ </Reference_List>
+ <File_Area_Observational>
+  <File>
+   <file_name>{basename_lower}_l1b_rdn.fits</file_name>
+   <creation_date_time>{product_creation_time}Z</creation_date_time>
+   <file_size unit="byte">{rdn_file_size}</file_size>
+   <records>{lines}</records>
+  </File>
+  <Header>
+   <name>RDN FITS Header</name>
+   <offset unit="byte">0</offset>
+   <object_length unit="byte">2880</object_length>
+   <parsing_standard_id>FITS 3.0</parsing_standard_id>
+  </Header>
+  <Array_3D_Image>
+   <local_identifier>{basename_lower}_l1b_rdn</local_identifier>
+   <offset unit="byte">2880</offset>
+   <axes>3</axes>
+   <axis_index_order>Last Index Fastest</axis_index_order>
+   <description>
+    RDN_FILE: calibrated M3 observational data. FITS version.
+   </description>
+   <Element_Array>
+    <data_type>IEEE754MSBSingle</data_type>
+    <unit>W/m**2/sr/μm</unit>
+   </Element_Array>
+   <Axis_Array>
+    <axis_name>Band</axis_name>
+    <elements>{rdn_bands}</elements>
+    <sequence_number>1</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Lines</axis_name>
+    <elements>{lines}</elements>
+    <sequence_number>2</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Samples</axis_name>
+    <elements>{samples}</elements>
+    <sequence_number>3</sequence_number>
+   </Axis_Array>
+  </Array_3D_Image>
+ </File_Area_Observational>
+ <File_Area_Observational>
+  <File>
+   <file_name>{basename_lower}_l1b_loc.fits</file_name>
+   <creation_date_time>{product_creation_time}Z</creation_date_time>
+   <file_size unit="byte">{loc_file_size}</file_size>
+   <records>{lines}</records>
+  </File>
+  <Header>
+   <name>LOC FITS Header</name>
+   <offset unit="byte">0</offset>
+   <object_length unit="byte">2880</object_length>
+   <parsing_standard_id>FITS 3.0</parsing_standard_id>
+  </Header>
+  <Array_3D_Image>
+   <local_identifier>{basename_lower}_l1b_loc</local_identifier>
+   <offset unit="byte">2880</offset>
+   <axes>3</axes>
+   <axis_index_order>Last Index Fastest</axis_index_order>
+   <description>
+    LOC_FILE: selenographic location information for RDN_FILE. FITS version. The
+    three 'bands' (axis 1) of the file have units of selenographic Longitude
+    (deg), Latitude (deg), Radius (m) respectively, in the MOON_ME coordinate
+    system.
+   </description>
+   <Element_Array>
+    <data_type>IEEE754MSBDouble</data_type>
+   </Element_Array>
+   <Axis_Array>
+    <axis_name>Selenographic Coordinates</axis_name>
+    <elements>3</elements>
+    <sequence_number>1</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Lines</axis_name>
+    <elements>{lines}</elements>
+    <sequence_number>2</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Samples</axis_name>
+    <elements>{samples}</elements>
+    <sequence_number>3</sequence_number>
+   </Axis_Array>
+  </Array_3D_Image>
+ </File_Area_Observational>
+ <File_Area_Observational>
+  <File>
+   <file_name>{basename_lower}_l1b_obs.fits</file_name>
+   <creation_date_time>{product_creation_time}Z</creation_date_time>
+   <file_size unit="byte">{obs_file_size}</file_size>
+   <records>{lines}</records>
+  </File>
+  <Header>
+   <name>OBS FITS Header</name>
+   <offset unit="byte">0</offset>
+   <object_length unit="byte">2880</object_length>
+   <parsing_standard_id>FITS 3.0</parsing_standard_id>
+  </Header>
+  <Array_3D_Image>
+   <local_identifier>{basename_lower}_l1b_obs</local_identifier>
+   <offset unit="byte">2880</offset>
+   <axes>3</axes>
+   <axis_index_order>Last Index Fastest</axis_index_order>
+   <description>
+    OBS_FILE: observation geometry information for RDN_FILE. FITS version. The
+    ten 'bands' (axis 1) of the file have the following units, in order: 
+    1. to-sun azimuth angle (decimal degrees, clockwise from local north) 
+    2. to-sun zenith angle (decimal degrees, zero at zenith) 
+    3. to-sensor azimuth angle (decimal degrees, clockwise from local north) 
+    4. to-sensor zenith angle (decimal degrees, zero at zenith) 
+    5. observation phase angle (decimaldegrees, in plane of to-sun and to-sensor rays) 
+    6. to-sun path length (decimal au with scene mean subtracted) 
+    7. to-sensor path length (decimal meters) 
+    8. surface slope from DEM (decimal degrees, zero at horizontal) 
+    9. surface aspect from DEM (decimal degrees, clockwise from local north) 
+    10. local cosine i (unitless, cosine of angle between to-sun and local DEM facet
+    normal vectors)
+   </description>
+   <Element_Array>
+    <data_type>IEEE754MSBSingle</data_type>
+   </Element_Array>
+   <Axis_Array>
+    <axis_name>Geometry Attributes (see description)</axis_name>
+    <elements>10</elements>
+    <sequence_number>1</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Lines</axis_name>
+    <elements>{lines}</elements>
+    <sequence_number>2</sequence_number>
+   </Axis_Array>
+   <Axis_Array>
+    <axis_name>Samples</axis_name>
+    <elements>{samples}</elements>
+    <sequence_number>3</sequence_number>
+   </Axis_Array>
+  </Array_3D_Image>
+ </File_Area_Observational>
+ <File_Area_Observational>
+  <File>
+   <file_name>{basename_lower}_l1b_tim.tab</file_name>
+   <creation_date_time>{product_creation_time}Z</creation_date_time>
+   <records>{lines}</records>
+  </File>
+  <Table_Delimited>
+   <local_identifier>{basename_lower}_l1b_tim</local_identifier>
+   <offset unit="byte">0</offset>
+   <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+   <description>
+    TIM_FILE: detailed timing information for RDN_FILE.
+   </description>
+   <records>{lines}</records>
+   <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+   <field_delimiter>Comma</field_delimiter>
+   <Record_Delimited>
+    <fields>4</fields>
+    <groups>0</groups>
+    <Field_Delimited>
+     <name>Line Number</name>
+     <field_number>1</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      'Index' column. Record number for each RDN image line. Right-justified.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Time</name>
+     <field_number>2</field_number>
+     <data_type>ASCII_Date_Time_YMD_UTC</data_type>
+     <description>
+      Time for the middle of the integration period for each RDN image line.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>Year</name>
+     <field_number>3</field_number>
+     <data_type>ASCII_Integer</data_type>
+     <description>
+      Four-digit year corresponding to the earliest time of each RDN image line.
+     </description>
+    </Field_Delimited>
+    <Field_Delimited>
+     <name>DDOY</name>
+     <field_number>4</field_number>
+     <data_type>ASCII_Real</data_type>
+     <description>
+      Decimal Day of Year represented as the number of days elapsed since 00:00
+      UTC of January 1 of the year associated with the time stamp of the first
+      line of the RDN image file. DDOY is expressed using seventeen characters
+      where 1-3 = three characters that contain the integer number of days; 4 =
+      a decimal point; 5-16 = twelve charact- ers after the decimal for the
+      fractional part of the day of year value.
+     </description>
+    </Field_Delimited>
+   </Record_Delimited>
+  </Table_Delimited>
+ </File_Area_Observational>
+</Product_Observational>

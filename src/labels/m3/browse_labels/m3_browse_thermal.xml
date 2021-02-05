@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Browse xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:browse:{basename}_thermal</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      M3 'Thermal' Browse Product for Basename {basename}
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Browse</product_class>
+    <Citation_Information>
+      <publication_year>2011</publication_year>
+      <description>
+        'Thermal' browse product for M3 observational data products with
+        basename {basename}. Browse images are described in EXTRINFO.TXT from
+        the PDS3 archive as "a single-band albedo JPEG image ([...]B046.JPG) and
+        a single-band thermal JPEG image ([...]B084.JPG) for each M3 radiance
+        image cube". (The numbers before the filename extension presumably refer
+        to the band / channel number from which they were produced.)
+        {delete:target:start}
+        For global-mode observations, band 84 corresponds to roughly 2940 nm.
+        {delete:target:stop}
+        {delete:global:start}
+        This accurately describes the JPEGs that match global-mode observations, but
+        target-mode observations in fact have four JPEGs, taken from bands 46, 84,
+        105, and 250. We have called the longest band 'thermal;' it is at roughly 2890 nm.
+        {delete:global:stop}
+        No details on the production of these images were provided by the original archivists.
+        We have retained them as-is with slightly-modified filenames to distinguish them
+        from the originals.
+      </description>
+    </Citation_Information>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2021-01-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>
+          Copied files from PDS3 data set.
+        </description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Context_Area>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1</lidvid_reference>
+        <reference_type>document_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+          </lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+          </lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+  </Context_Area>
+  {delete:target:start}
+  <File_Area_Browse>
+    <File>
+      <file_name>{basename}_thermal_84.jpg</file_name>
+    </File>
+    <Encoded_Image>
+      <offset unit="byte">0</offset>
+      <encoding_standard_id>JPEG</encoding_standard_id>
+    </Encoded_Image>
+  </File_Area_Browse>
+  {delete:target:stop}
+  {delete:global:start}
+  <File_Area_Browse>
+    <File>
+      <file_name>{basename}_thermal_250.jpg</file_name>
+    </File>
+    <Encoded_Image>
+      <offset unit="byte">0</offset>
+      <encoding_standard_id>JPEG</encoding_standard_id>
+    </Encoded_Image>
+  </File_Area_Browse>
+    {delete:global:stop}
+</Product_Browse>

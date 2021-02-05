@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:lab_flat_field_global</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      M3 Laboratory Flat Field Image (Global Mode)
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <publication_year>2011</publication_year>
+      <description>
+        "When illuminated by a uniform light source, there is some variability
+        in the cross-track radiometric response. To correct for this, laboratory
+        measurements were acquired across the field of view from a uniform
+        source. Figure 2-13 shows the laboratory flat field image. The flat
+        field is 640 spatial by 260 spectral values for Target Mode and 320
+        spatial by 86 spectral values for Global Mode. The flat field is
+        multiplied by the DSS image to compensate for this radiometric
+        variability in the full system." (DPSIS, p.30) We have reformatted the
+        image from ENVI .IMG to FITS and discarded its detached header. Time
+        coordinates listed in this label simply correspond to the product
+        creation time; it is in some sense not really an "observational" product
+        and has no specific duration of observation.
+      </description>
+    </Citation_Information>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>2008-10-31T00:00:00Z</start_date_time>
+      <stop_date_time>2008-10-31T00:00:00Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Calibration</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <wavelength_range>Visible</wavelength_range>
+        <wavelength_range>Near Infrared</wavelength_range>
+        <wavelength_range>Infrared</wavelength_range>
+        <discipline_name>Imaging</discipline_name>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+        </lidvid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+            </lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+            </lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <File_Area_Observational>
+    <File>
+      <file_name>lab_flat_field_global.fits</file_name>
+      <creation_date_time>2008-10-31T00:00:00Z</creation_date_time>
+      <file_size unit="byte">115200</file_size>
+      <records>86</records>
+    </File>
+    <Header>
+      <name>FITS Image Header</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Array_2D_Image>
+      <offset unit="byte">2880</offset>
+      <axes>2</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <description>
+        "When illuminated by a uniform light source, there is some variability
+        in the cross-track radiometric response. To correct for this, laboratory
+        measurements were acquired across the field of view from a uniform
+        source. Figure 2-13 shows the laboratory flat field image. The flat
+        field is 640 spatial by 260 spectral values for Target Mode and 320
+        spatial by 86 spectral values for Global Mode. The flat field is
+        multiplied by the DSS image to compensate for this radiometric
+        variability in the full system." (DPSIS, p.30)
+      </description>
+      <Element_Array>
+        <data_type>SignedLSB4</data_type>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>86</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Sample</axis_name>
+        <elements>320</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+    </Array_2D_Image>
+  </File_Area_Observational>
+</Product_Observational>

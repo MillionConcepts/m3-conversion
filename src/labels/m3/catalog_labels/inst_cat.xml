@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Document xmlns="http://pds.nasa.gov/pds4/pds/v1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:inst_cat</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      M3 PDS3 Instrument Catalog file
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Document</product_class>
+    <Citation_Information>
+      <author_list>
+        Malaret, E., P. Guasqui, S. McLaughlin, J. Sunshine, S. Besse, 
+        R. Clark, and P. Isaacson. 
+        (Authorship here ascribed based on archive-level information.
+        This document contains no independent authorial attribution.)
+      </author_list>
+      <editor_list>
+        J. Ward.
+      </editor_list>
+      <publication_year>2011</publication_year>
+      <description>
+        PDS3 instrument catalog (INST.CAT) file used in PDS3 CH1-ORB-L-M3-* data
+        sets. Provides high-level information regarding the Moon Mineralogy
+        Mapper.
+      </description>
+    </Citation_Information>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2021-01-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>
+          Copied text from PDS3 data set.
+        </description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Context_Area>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1</lidvid_reference>
+        <reference_type>document_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+          </lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+          </lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>document_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Context_Area>
+  <Reference_List>
+    <External_Reference>
+      <reference_text>
+      Malaret, E., P. Guasqui, S. McLaughlin, J. Sunshine, S. Besse, R. Clark, and P. Isaacson,        
+      CH1-ORB MOON M3 4 L2 REFLECTANCE NEAR-IR SPECTRAL IMAGES V1.0, CH1-ORB-L-M3-4-L2-REFLECTANCE-V1.0,
+      NASA Planetary Data System, 2011.
+      </reference_text>
+    </External_Reference>
+  </Reference_List>
+  <Document>
+    <publication_date>2011</publication_date>
+    <description>
+      PDS3 instrument catalog file used in PDS3 CH1-ORB-L-M3-* data sets.
+      Provides high-level information regarding the Moon Mineralogy Mapper.
+    </description>
+    <Document_Edition>
+      <edition_name>UTF-8 version</edition_name>
+      <language>English</language>
+      <files>1</files>
+      <Document_File>
+        <file_name>inst_cat.txt</file_name>
+        <document_standard_id>UTF-8 Text</document_standard_id>
+      </Document_File>
+    </Document_Edition>
+  </Document>
+</Product_Document>

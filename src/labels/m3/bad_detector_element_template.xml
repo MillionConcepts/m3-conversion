@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational xmlns="http://pds.nasa.gov/pds4/pds/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+"http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:ch1_m3:document:{basename_lower}_bde</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      M3 Bad Detector Element Map {basename}
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <publication_year>2011</publication_year>
+      <description>
+        Bad detector map used in production of L1B data. "M3 uses 166400
+        detector elements of the 6604a mercury-cadmium-telluride (MCT) detector
+        array. A number of these detector elements exhibit non-standard behavior
+        ranging from non-responsive high and low to excessively noisy. These
+        non-standard detector elements are referred to as bad detector elements
+        (BDE). The number of BDEs vary somewhat with time and is also a function
+        of the temperature of the detector array. For each illuminated M3 image,
+        the number and location of BDEs is determined by calculating the mean
+        and standard deviation of the signal in the corresponding dark signal
+        image. Detector elements that are non-responsive or excessively noisy
+        are flagged in a BDE image (640 spatial by 260 spectral for Target Mode
+        and 320 spatial by 86 spectral for Global Mode). Figure 2-11 shows map
+        of bad detector elements, the detector tap boundaries, and the filter
+        seams. The tap boundaries and filter seams are discussed below. The
+        identified bad detector elements are replaced in the DSS image using
+        simple linear interpolation in the spectral direction." (DPSIS, p.28) We
+        have reformatted the image from ENVI .IMG to FITS and discarded its
+        detached header. Time coordinates listed in this label simply correspond
+        to the nominal observation time; it is in some sense not really an
+        "observational" product and has no specific duration of observation. It
+        corresponds to the set of data products with which it shares a filename
+        stem (referenced below).
+      </description>
+    </Citation_Information>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>{nominal_product_time}</start_date_time>
+      <stop_date_time>{nominal_product_time}</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Calibration</purpose>
+      <processing_level>Derived</processing_level>
+      <Science_Facets>
+        <wavelength_range>Visible</wavelength_range>
+        <wavelength_range>Near Infrared</wavelength_range>
+        <wavelength_range>Infrared</wavelength_range>
+        <discipline_name>Imaging</discipline_name>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>CHANDRAYAAN-1</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.chandrayaan-1::1.1
+        </lidvid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CHANDRAYAAN-1 ORBITER</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.ch1-orb::1.1
+            </lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>MOON MINERALOGY MAPPER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:m3.ch1-orb::1.0
+            </lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>Moon</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+  </Observation_Area>
+  <Reference_List>
+    <Internal_Reference>
+      <lidvid_reference>urn:nasa:pds:ch1_m3:data:{basename_lower}_l0::1.0
+      </lidvid_reference>
+      <reference_type>data_to_associate</reference_type>
+    </Internal_Reference>
+    <Internal_Reference>
+      <lidvid_reference>urn:nasa:pds:ch1_m3:data:{basename_lower}_l1b::1.0
+      </lidvid_reference>
+      <reference_type>data_to_associate</reference_type>
+    </Internal_Reference>
+    <Internal_Reference>
+      <lidvid_reference>urn:nasa:pds:ch1_m3:data:{basename_lower}_l2::1.0
+      </lidvid_reference>
+      <reference_type>data_to_associate</reference_type>
+    </Internal_Reference>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>{basename_lower}_bde.fits</file_name>
+      <creation_date_time>{nominal_product_time}</creation_date_time>
+      <file_size unit="byte">{mode_file_size}</file_size>
+      <records>{file_records}</records>
+    </File>
+    <Header>
+      <name>FITS Image Header</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Array_2D_Image>
+      <offset unit="byte">2880</offset>
+      <axes>2</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <description>
+        "M3 uses 166400 detector elements of the 6604a mercury-cadmium-telluride
+        (MCT) detector array. A number of these detector elements exhibit
+        non-standard behavior ranging from non-responsive high and low to
+        excessively noisy. These non-standard detector elements are referred to
+        as bad detector elements (BDE). The number of BDEs vary somewhat with
+        time and is also a function of the temperature of the detector array.
+        For each illuminated M3 image, the number and location of BDEs is
+        determined by calculating the mean and standard deviation of the signal
+        in the corresponding dark signal image. Detector elements that are
+        non-responsive or excessively noisy are flagged in a BDE image (640
+        spatial by 260 spectral for Target Mode and 320 spatial by 86 spectral
+        for Global Mode). Figure 2-11 shows map of bad detector elements, the
+        detector tap boundaries, and the filter seams. The tap boundaries and
+        filter seams are discussed below. The identified bad detector elements
+        are replaced in the DSS image using simple linear interpolation in the
+        spectral direction." (DPSIS, p.28)
+      </description>
+      <Element_Array>
+        <data_type>SignedLSB4</data_type>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>{mode_lines}</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Sample</axis_name>
+        <elements>{mode_samples}</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+    </Array_2D_Image>
+  </File_Area_Observational>
+</Product_Observational>
