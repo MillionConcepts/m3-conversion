@@ -14,4 +14,3 @@ dependencies:
   - astropy
   - sh
   - rasterio
-prefix: /home/michael/anaconda3/envs/m3_conversion
