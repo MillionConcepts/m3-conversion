@@ -197,6 +197,6 @@ Council,
 <a name="footnote3">3</a>: Erlang would probably be good for this.
 
 <a name="footnote4">4</a>: Note that this document is largely rehearsed, with
-appropriate changes in our [Clementine Imaging Bundle conversion
-repository](https://github.com/MillionConcepts/clementine-conversion)
+appropriate changes, in our [Clementine Imaging Bundle conversion
+repository](https://github.com/MillionConcepts/clementine-conversion).
 
