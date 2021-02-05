@@ -52,7 +52,7 @@ their individual working environments. In some cases, notes on this are
 included in comments or text blocks in individual files. 
  * This software has *absolutely not been tested with any users other than 
 ourselves.* We are happy to provide advice, to receive bug reports on issues 
-that may have resulted during software export and transcription that render 
+that may have occurred during software export and transcription that render 
 it unusable for persons other than ourselves, and *especially* happy to receive 
 reports on software behavior that may have mangled output data or metadata. 
 Please file GitHub issues.
