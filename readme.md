@@ -31,7 +31,7 @@ For this reason, we strongly recommend that anyone who produces new versions
 of the Chandrayaan-1 Moon Mineralogy Mapper bundle and makes them publicly 
 available also modify or fork this repository -- or at least clearly document 
 what happened to the data products after they were processed by the software 
-in this repository. Otherwise, thisrepository will no longer be useful 
+in this repository. Otherwise, this repository will no longer be useful 
 documentation; it could even become misleading.
 
 ### tips for use
