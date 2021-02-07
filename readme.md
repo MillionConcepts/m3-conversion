@@ -46,6 +46,8 @@ environment produced by Microsoft.
 not included in this repository because it is too large to be stored on
 GitHub. It can be readily converted by users following the method we use for
 the other ENVI arrays referenced in the codebase. 
+* ```pdr``` includes ```pds4_tools``` as a dependency. It is not distributed
+via ```conda```. It can be installed with ```pip```.
 * This is not, and is not intended to be, a ready-to-go installable application
 or general-purpose library. Users will likely need to make modifications for
 their individual working environments. In some cases, notes on this are
