@@ -4,7 +4,7 @@
 
 This repository contains software and ancillary materials used to translate
 and modernize imaging data and metadata from the Chandrayaan-1 Moon Mineralogy
-Mapper ("M3"). This conversion effort specifically the PDS3 data sets
+Mapper ("M3"). This conversion effort specifically includes the PDS3 data sets
 CH1-ORB-L-M3-2-L0-RAW-V1.0, CH1-ORB-L-M3-4-L1B-RADIANCE-V3.0, and
 CH1-ORB-L-M3-4-L2-REFLECTANCE-V1.0, all currently held by the Planetary Data
 System (PDS) Imaging Node (IMG). This software was used to organize the
