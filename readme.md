@@ -11,10 +11,7 @@ System (PDS) Imaging Node (IMG). This software was used to organize the
 contents of these data sets into PDS4 products and convert some of their
 component files into more compliant and/or usable formats.
 
-**All contents of this repository should be regarded with skepticism. The 
-products they were used to produce have not yet been reviewed by the PDS.
-We will do our best to update this repository to reflect the results of PDS
-peer review, but it should currently be regarded as preliminary.**
+[IMG-USGS hosts the completed PDS4 bundle.](https://pdsimage2.wr.usgs.gov/Chandrayaan_1/)
 
 ### purpose of this repository
 
@@ -63,12 +60,12 @@ Please file GitHub issues.
 
 This repository is not a mirror of the output PDS4 bundle. The bundle is over
 four terabytes in volume; GitHub is not an appropriate platform from which to
-serve the archive. Users who simply wish to access data in the bundle should
-go to IMG's servers: **TODO: LINK GOES HERE WHEN LIVE.** Similarly, this
-repository is not a mirror of the input PDS3 data sets. PDS3 products to use
-this software on can be found on [volumes CH1M3_0001 through CH1M3_0004 in
-this directory](https://pds-imaging.jpl.nasa.gov/data/m3/), also hosted by
-IMG.
+serve the archive. Users who simply wish to access data in the bundle may
+retrieve it from IMG: https://pdsimage2.wr.usgs.gov/Chandrayaan_1/.
+
+Similarly, repository is not a mirror of the input PDS3 data sets. 
+PDS3 input products are also held hby IMG, and can be found in
+[volumes CH1M3_0001 through CH1M3_0004 here](https://pds-imaging.jpl.nasa.gov/data/m3/).
 
 It does not exhaustively explain every step of the conversion and labeling
 process. This is primarily because much of the process took place manually.
